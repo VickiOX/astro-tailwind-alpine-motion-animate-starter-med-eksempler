@@ -1,5 +1,36 @@
 ---
 ---
-<div class="pb-6 border-b-2 prose">
-En lille note om
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full">
+    <div id="navbar" class="flex flex-row justify-between py-4 px-8 w-full bg-neutral-300 font-semibold ">
+        <div id="logo" class="border-orange-700 hover:scale-110 hover:border-b-2">
+            <a href="#top">Site logo</a>
+        </div>
+        <nav id="desktopmenu" class="hidden lg:block">
+            <ul class="flex flex-row gap-6">
+                <li class="border-orange-700 hover:scale-110 hover:border-b-2"><a href="#herounit">Top</a></li>
+                <li class="border-orange-700 hover:scale-110 hover:border-b-2"><a href="#bogen">Bogen</a></li>
+                <li class="border-orange-700 hover:scale-110 hover:border-b-2"><a href="#billeder">Billeder</a></li>
+                <li class="border-orange-700 hover:scale-110 hover:border-b-2"><a href="#bestil">Bestil</a></li>
+            </ul>
+        </nav>
+        <button id="burgermenu" class="lg:hidden hover:scale-110 hover:border-b-2 border-orange-700" x-on:click="showmenu = ! showmenu">Menu</button>
+    </div>
+    <nav id="mobilmenu" class="flex flex-col content-center " x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul >
+            <li class="text-center py-2 border-y-2 text-orange-700 bg-neutral-300  border-orange-700 hover:scale-110 font-bold"><a href="#herounit">Top</a></ul></li>
+            <li class="text-center py-2 border-b-2 text-orange-700 bg-neutral-300  border-orange-700 hover:scale-110 font-bold"><a href="#bogen">Bogen</a></li>
+            <li class="text-center py-2 border-b-2 text-orange-700 bg-neutral-300  border-orange-700 hover:scale-110 font-bold"><a href="#billeder">Billeder</a></li>
+            <li class="text-center py-2 border-b-2 text-orange-700 bg-neutral-300  border-orange-700 hover:scale-110 font-bold"><a href="#bestil">Bestil</a></li>
+        </ul>
+    </nav>
 </div>
+
+<style>
+    #burgermenu{
+        padding: 0 10px;
+    }
+
+    #logo{
+        padding:0 10px;
+    }
+</style>

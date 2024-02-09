@@ -1,39 +1,421 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import GalleriFoto from '../components/GalleriFoto.astro';
 ---
 <MainLayout title="Astro, Tailwind, Alpine, Motion One og Animate CSS Starter">
-	<article class="prose" x-data>
-		<h1>Astro, Tailwind, Alpine, Motion One og Animate CSS kombineret i en fin, lille starter:-)</h1>
-		<p>Brug starteren til at komme godt i gang med dine Digital Design projekter</p>
-		<p>Se også:</p>
-		<ul>
-			<li><a href="https://astro.build/" alt="Astro Website" target="_blank">Astro</a></li>
-			<li><a href="https://tailwindcss.com/" alt="Tailwind CSS website" target="_blank">Tailwind</a></li>
-			<li><a href="https://alpinejs.dev/" alt="Alpine JS website" target="_blank">Alpine.js</a></li>
-			<li><a href="https://motion.dev/" alt="Motion One website" target="_blank">Motion One</a></li>
-			<li><a href="https://animate.style/" alt="Animate.CSS website" target="_blank">Animate CSS</a></li>
-		</ul>
-		<p>
-			Start med at clone repo'et fra Github: <a href="https://github.com/stefangrage/astro-tailwind-alpine-motion-animate-starter" alt="Astro, Tailwind, Alpine, Motion One og Animate CSS Starter">https://github.com/stefangrage/astro-tailwind-alpine-motion-animate-starter</a>
-		</p>
-		<p>
-			Tilpas derefter indholdet i "pages, layouts, components og assets...
-		</p>
-		<p>
-			Og vigtigst af alt: Lav noget godt:-)
-		</p>
-		<p>
-			Se også <a href="http://motherfuckingwebsite.com/" alt="mf website">dette lille site</a> for lidt inspiration.
-		</p>
-		<div>
-		<Button>Fang mig hvis du kan:-)</Button>
-		</div>
+	<article class=" pt-10 " x-data>
+		<h1 class="text-4xl font-black pb-4 lg:text-8xl fadeLeftIn duration-500">Københavnerbilleder</h1>
+
+		<section class="heroUnit lg:grid lg:grid-cols-2 border-2  border-black border-solid bg-gradient-to-r from-orange-700 to-neutral-950">
+			<div class="overflow-hidden"> 
+				<img class="lg:w-fill xl:w-full hover:scale-110  transition duration-700" src="/img/kobenhavnerbilleder-sten-simons.jpg" alt="billede af bogen">
+			</div>
+			<div class=" pl-4 mt-16 sm:pl-4 text-white lg:mt-20  xl:mt-72">
+				<h2 class="text-3xl font-bold pb-4 mb-2 lg:text-6xl fadeInDownHero">Hero unit</h2>
+				<p>Københavnerbilleder - en guide til hipster foto af Sten Simons</p>
+				<p>Billede af bogen: Kan være “kobenhavnerbilleder-sten-simons.jpg” eller billeder fra bogen - der er frit valg, så længe det skaber stemning. </p>
+				<Button variant="primary" size="large" >Køb her!</Button>
+			</div>
+		</section>
+
+		<section class="py-28 lg:flex lg:flex-row justify-center mx-auto md:px-20  duration-700">
+			<div class="omBogen w-96 px-4">
+				<h2 class="text-2xl lg:text-4xl font-bold fadeInDownBog ">Kort om bogen</h2>
+				<p class="">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+			</div>
+			<div class="quickFacts w-96 px-4 py-16  lg:py-0 ">
+				<h2 class="text-2xl lg:text-4xl  font-bold fadeInDownStamData">Stamdata for bogen</h2>
+				<div class=""> 
+					<p>Titel: Københavnerbilleder - en guide til hipster foto</p>
+					<p>Forfatter: Sten Simons</p>
+					<p>Antal sider: 344</p>
+					<p>Forlag: Mellem Linjerne</p>
+					<p>ISBN: 987-6-987654-32-1</p>
+					<p>Pris: 399.-</p>
+				</div>
+			</div>
+		
+		</section>
+		
+		<section class="fotoAfBog bounceInLeft justify-center lg:flex lg:basis-3 lg:gap-4 lg:columns-3 bogFadeIn duration-500">
+			<img class="w-120 pb-4 md:pb-0 sm:w-60 md:w-96 hover:scale-110  transition duration-700" src="/img/kobenhavnerbilleder_aaben_venstre.jpg" alt="">
+
+			<img class="w-120 pb-4 md:pb-0 sm:w-60 md:w-96 hover:scale-110  transition duration-700" src="/img/kobenhavnerbilleder-sten-simons.jpg" alt="">
+
+			<img class="w-120 pb-4 md:pb-0 sm:w-60 md:w-96 hover:scale-110  transition duration-700" src="/img/kobenhavnerbilleder_oppefra.jpg" alt="">
+		</section>
+		
+		<section  class="pt-28">
+			<h2 class="text-3xl lg:text-6xl font-bold pb-8 fadeLeftInBK">Bogens kapitler</h2>
+			<section class="sm:flex sm:flex-wrap fsm:lex-rows-2 justify-center">
+				<div class="kapitel_1 sm:basis-1/2 pb-8  ">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK1">Kapitel 1 - Intro til street foto</h2>
+					<p class="">Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban 	geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de	kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
+				</div>
+				<div class="kapitel_2 sm:basis-1/2 pb-8">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK2">Kapitel 2 - Om at skyde street</h2>
+					<p class="">Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p>
+				</div>
+				<div class="kapitel_3 sm:basis-1/2 pb-8">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK3">Kapitel 3 - Om at finde det rette motiv</h2>
+					<p class="">Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks 	til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
+				</div>
+				<div class="kapitel_4 sm:basis-1/2 pb-8">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK4">Kapitel 4 - Digital street foto</h2>
+					<p  class="">De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og 	fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto. </p>
+				</div>
+				<div class="kapitel_5 sm:basis-1/2 pb-8">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK5">Kapitel 5 - Analog street foto</h2>
+					<p  class="">Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer 	entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto. </p>
+				</div>
+				<div class="kapitel_6 sm:basis-1/2 pb-8">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK6">Kapitel 6 - Om at skyde sort/hvid</h2>
+					<p  class="">Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering. </p>
+				</div>
+				<div class="kapitel_7 sm:basis-1/2 pb-8">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK7">Kapitel 7 - Kreative teknikker </h2>
+					<p class="">Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle 	mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer 	af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
+				</div>
+				<div class="kapitel_8 sm:basis-1/2">
+					<h2 class="text-xl lg:text-2xl font-bold fadeInDownK8">Kapitel 8 - Kom helt tæt på!</h2>
+					<p class="">Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker 	og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
+				</div>
+			</section>
+		</section>
+
+		<section class="mt-28 py-10 lg:py-28 lg:px-28 bg-gradient-to-r from-neutral-950 to-orange-700 border-2 border-neutral-950 pl-4 bounceIn">
+			<h2 class=" text-3xl lg:text-6xl font-bold pb-8 text-white">Anmeldelser af bogen</h2>
+			<section class="sm:flex sm:gap-4 sm:justify-center">
+				<div class="kommentar_1 sm:basis-1/3 pb-8">
+					<div class=" stjerner flex">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-none stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					</div>
+					<div class="text-white">
+						<h3 class="text-2xl font-bold ">5 af 6 stjerner</h3>
+						<p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.
+						</p>
+						<p>- Hanne Hovgaard, Berlingeren </p>
+					</div>
+				</div>
+
+				<div class="kommentar_2 sm:basis-1/3 pb-8">
+					<div class=" stjerner flex">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-none stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					</div>
+					<div class="text-white"> 
+						<h3  class="text-2xl font-bold">4 af 5 stjerner</h3>
+						<p>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
+						<p>- Kim Kloggaard, Fotojournalen.dk</p>
+					</div>
+				</div>
+
+				<div class="kommentar_3 sm:basis-1/3 pb-8">
+					<div class=" stjerner flex">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7 fill-orange-700 stroke-white">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					</div>
+					<div class="text-white">
+						<h3  class="text-2xl font-bold">6 af 6 stjerner</h3>
+						<p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+						<p>- Volmer Hansen, Lukkertiden.dk </p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<section>
+			<h2 class="text-3xl lg:text-6xl font-bold mt-28 lg:pl-32 fadeLeftInG">Galleri - billeder fra bogen</h2>
+			<div class=" lg:flex flex-row justify-center px-100 lg:px-16 gap6 pt-4 ">
+				<div>
+					<GalleriFoto img1="/galleri/17.jpg" alt="korn" img2="/galleri/13.jpg" alt="" img3="/galleri/3.jpg" alt="" img4="/galleri/30.jpg" alt="" img5="/galleri/5.jpg" alt="korn" img6="/galleri/23.jpg" alt="" img7="/galleri/20.jpg" alt="" img8="/galleri/9.jpg" alt=""></GalleriFoto>
+				</div>
+				<div>
+					<GalleriFoto img1="/galleri/2.jpeg" alt="korn" img2="/galleri/16.jpg" alt="" img3="/galleri/10.jpg" alt="" img4="/galleri/27.jpg" alt="" img5="/galleri/29.jpg" alt="korn" img6="/galleri/28.jpg" alt="" img7="/galleri/14.jpg" alt="" img8="/galleri/31.jpg" alt=""></GalleriFoto>
+				</div>
+				<div>
+					<GalleriFoto img1="/galleri/32.jpg" alt="korn" img2="/galleri/11.jpg" alt="" img3="/galleri/1.jpeg" alt="" img4="/galleri/15.jpg" alt="" img5="/galleri/19.jpg" alt="korn" img6="/galleri/4.jpg" alt="" img7="/galleri/6.jpg" alt="" img7="/galleri/8.jpg" alt=""></GalleriFoto>
+				</div>
+				<div>
+					<GalleriFoto img1="/galleri/22.jpg" alt="korn" img2="/galleri/21.jpg" alt="" img3="/galleri/12.jpg" alt="" img4="/galleri/24.jpg" alt="" img5="/galleri/26.jpg" alt="korn" img6="/galleri/33.jpg" alt="" img7="/galleri/25.jpg" alt=""></GalleriFoto>
+				</div>				
+			</div>
+		</section>
+
+		<section class=" py-28 ">
+			<h2 class="text-3xl lg:text-6xl font-bold pb-6 sm:ml-40 lg:ml-80 fadeInLeftF">Forfatteren</h2>
+			<div class=" sm:grid sm:grid-cols-2 lg:flex  lg:flex-row justify-center">
+				<div class="container">
+					<img class="w-full sm:ml-40 md:w-80  lg:ml-80 block " src="/img/sten_simons.jpg" alt="Billede af forfatteren">
+				</div>
+				<div class="pt-4 container mb-10">
+					<p class="lg:w-96">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”</p>
+					<p class=" pt-4 lg:w-96">Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="pb-28">
+			<h2 class="text-3xl lg:text-6xl font-bold py-16 heartBeat">Køb københavnerbilleder nu!</h2>
+			<form class="grid grid-cols-1 gap-6">
+			
+				<div class="grid grid-row-2">
+					<label class="" for="antal">Antal</label>
+					<input type="number" id="antal" placeholder="1" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2"> 
+				</div>
+		
+	
+				<div class="grid grid-rows-2">
+					<label class="" for="levering">Levering</label>
+					<div>
+					<input type="radio" id="postnord" name="Postnord" class="peer/postnord border-orange-700  hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+					<label for="postnord" checked="checked" class="peer-checked/postnord:text-orange-500 " >Postnord</label>
+					<input type="radio" id="afhent" name="Afhent selv" class="peer/afhent border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+					<label for="afhent" checked="checked" class="peer-checked/afhent:text-orange-500 ">Afhent selv</label>
+					</div>
+					
+				</div>
+				
+				<div class="grid grid-rows-2">
+					<label for="fnavn" class="mt-2 ">Fornavn</label>
+					<input type="text" id="fnavn" name="Fornavn" placeholder="Anders" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+				</div>
+	
+				<div class="grid grid-rows-2">
+					<label for="enavn" class="mt-2 ">Efternavn</label>
+					<input type="text" id="enavn" name="Efternavn" placeholder="And" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+				</div>
+	
+				<div class="grid grid-rows-2">
+					<label for="adresse" class="mt-2 ">Adresse</label>
+					<input type="text" id="adresse" name="Adresse" placeholder="Paradisæblevej 8" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+				</div>
+	
+				<div class="grid grid-rows-2">
+					<label for="email" class="mt-2 ">E-mail</label>
+					<input type="email" id="email" name="E-mail" placeholder="anders@andeby.dk" class="border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+				</div>
+	
+				<div class="grid grid-rows-2">
+					<label for="postnummer" class="mt-2 ">Postnummer & by</label>
+					<div> 
+						<input type="text" id="postnummer" name="Postnummer" placeholder="0900" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+						<label for="bynavn" disabled="disabled" class="mt-2 "></label>
+						<input type="text" id="bynavn" name="Bynavn" placeholder="Andeby C" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+					</div>
+				</div>
+	
+				<div class="grid grid-rows-2">
+					<label for="telefon" class="mt-2 ">Telefon</label>
+					<input type="tel" id="telefon" name="Telefon" placeholder="555-555" class=" border-orange-700 hover:bg-orange-100 focus:border-black focus:bg-white focus:ring-0 border-2">
+				</div>
+	
+				<div class="pb-6">
+					<input type="checkbox" id="nyhedsbrev" name="Nyhedsbrev" class="rounded border-orange-700 hover:bg-orange-100 focus:border-orange-700 focus:bg-white text-orange-700 focus:ring-1 focus:ring-offset-2 border-2">
+					<label class="" for="nyhedsbrev">Ja tak til nyhedsbrev og tilbud</label>
+				</div>
+			
+			</form>
+			<div>	
+				<Button variant="primary" size="medium" >Køb her!</Button>
+			</div>
+		</section>
 	</article>
 </MainLayout>
-<style>
-	ul>li:hover{
-		animation: headShake; /* referring directly to the animation's @keyframe declaration */
-  		animation-duration: 1s; /* don't forget to set a duration! */
-	}
-</style>
+
+
+<script>
+	import { inView } from "motion";
+
+ 
+//fadeIn
+const bogfadein = document.querySelector(".bogFadeIn");
+
+inView(bogfadein, () => {
+
+	bogfadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+//fadeInLeft
+const fadeinleft = document.querySelector(".fadeLeftIn");
+
+inView(fadeinleft, () => {
+
+	fadeinleft.classList.add("animate__animated", "animate__fadeInLeft");
+
+}); 
+
+const fadeinleftbk = document.querySelector(".fadeLeftInBK");
+
+inView(fadeinleftbk, () => {
+
+	fadeinleftbk.classList.add("animate__animated", "animate__fadeInLeft");
+
+}); 
+
+const fadeinleftg = document.querySelector(".fadeLeftInG");
+
+inView(fadeinleftg, () => {
+
+	fadeinleftg.classList.add("animate__animated", "animate__fadeInLeft");
+
+}); 
+
+const fadeinleftf = document.querySelector(".fadeInLeftF");
+
+inView(fadeinleftf, () => {
+
+	fadeinleftf.classList.add("animate__animated", "animate__fadeInLeft");
+
+}); 
+
+
+//fadeInDown
+const fadeindownb = document.querySelector(".fadeInDownBog");
+
+inView(fadeindownb, () => {
+
+	fadeindownb.classList.add("animate__animated", "animate__fadeInDown");
+
+}); 
+
+const fadeindowns = document.querySelector(".fadeInDownStamData");
+
+inView(fadeindowns, () => {
+
+	fadeindowns.classList.add("animate__animated", "animate__fadeInDown");
+
+}); 
+
+const fadeindownh = document.querySelector(".fadeInDownHero");
+
+inView(fadeindownh, () => {
+
+	fadeindownh.classList.add("animate__animated", "animate__fadeInDown");
+
+}); 
+
+const fadeindownk1 = document.querySelector(".fadeInDownK1");
+
+inView(fadeindownk1, () => {
+
+	fadeindownk1.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+const fadeindownk2 = document.querySelector(".fadeInDownK2");
+
+inView(fadeindownk2, () => {
+
+	fadeindownk2.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+const fadeindownk3 = document.querySelector(".fadeInDownK3");
+
+inView(fadeindownk3, () => {
+
+	fadeindownk3.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+const fadeindownk4 = document.querySelector(".fadeInDownK4");
+
+inView(fadeindownk4, () => {
+
+	fadeindownk4.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+const fadeindownk5 = document.querySelector(".fadeInDownK5");
+
+inView(fadeindownk5, () => {
+
+	fadeindownk5.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+const fadeindownk6 = document.querySelector(".fadeInDownK6");
+
+inView(fadeindownk6, () => {
+
+	fadeindownk6.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+const fadeindownk7 = document.querySelector(".fadeInDownK7");
+
+inView(fadeindownk7, () => {
+
+	fadeindownk7.classList.add("animate__animated", "animate__fadeInDown");
+
+});
+
+
+
+//bouncein
+const bouncein = document.querySelector(".bounceIn");
+
+inView(bouncein, () => {
+
+	bouncein.classList.add("animate__animated", "animate__bounceIn", "animate__delay-1s");
+
+});
+
+
+
+const heartbeat = document.querySelector(".heartBeat");
+
+inView(heartbeat, () => {
+
+	heartbeat.classList.add("animate__animated", "animate__heartBeat", "animate__delay-0.5s");
+
+});
+
+</script>
